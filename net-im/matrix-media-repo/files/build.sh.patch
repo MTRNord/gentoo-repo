@@ -1,0 +1,8 @@
+--- a/build.sh
++++ b/build.sh
+@@ -2,4 +2,4 @@
+ 
+ GOBIN=$PWD/bin go install -v ./cmd/compile_assets
+ $PWD/bin/compile_assets
+-GOBIN=$PWD/bin go install -ldflags "-X github.com/turt2live/matrix-media-repo/common/version.GitCommit=$(git rev-list -1 HEAD) -X github.com/turt2live/matrix-media-repo/common/version.Version=$(git describe --tags)" -v ./cmd/...
++GOBIN=$PWD/bin go install -ldflags "-X github.com/turt2live/matrix-media-repo/common/version.GitCommit=1.2.8 -X github.com/turt2live/matrix-media-repo/common/version.Version=1.2.8" -v ./cmd/...

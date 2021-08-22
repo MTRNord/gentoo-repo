@@ -1993,6 +1993,10 @@ go-module_set_globals
 SRC_URI="https://github.com/turt2live/matrix-media-repo/archive/v${PV}.tar.gz -> matrix-media-repo-v${PV}.tar.gz
 	${EGO_SUM_SRC_URI}"
 
+PATCHES=(
+	"${FILESDIR}"/build.sh.patch
+)
+
 LICENSE="MIT"
 SLOT="0"
 
