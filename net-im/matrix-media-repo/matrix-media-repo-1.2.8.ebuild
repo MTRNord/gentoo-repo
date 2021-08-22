@@ -1990,7 +1990,7 @@ EGO_SUM=(
         )
 go-module_set_globals
 
-SRC_URI="https://github.com/turt2live/matrix-media-repo/archive/v1.2.8.tar.gz -> v1.2.8.tar.gz
+SRC_URI="https://github.com/turt2live/matrix-media-repo/archive/v${PV}.tar.gz -> matrix-media-repo-v${PV}.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 LICENSE="MIT"
@@ -2007,9 +2007,9 @@ DEPEND="
 BDEPEND=""
 
 src_compile() {
-	"${WORKDIR}/matrix-media-repo-1.2.8/build.sh"
+	"${WORKDIR}/${P}/build.sh"
 }
 
 src_install() {
-	dobin "${WORKDIR}/matrix-media-repo-1.2.8/bin/media_repo" "${WORKDIR}/matrix-media-repo-1.2.8/bin/export_synapse_for_import" "${WORKDIR}/matrix-media-repo-1.2.8/bin/gdpr_export" "${WORKDIR}/matrix-media-repo-1.2.8/bin/gdpr_import" "${WORKDIR}/matrix-media-repo-1.2.8/bin/import_synapse" "${WORKDIR}/matrix-media-repo-1.2.8/bin/plugin_antispam_ocr"
+	dobin "${WORKDIR}/${P}/bin/media_repo" "${WORKDIR}/${P}/bin/export_synapse_for_import" "${WORKDIR}/${P}/bin/gdpr_export" "${WORKDIR}/${P}/bin/gdpr_import" "${WORKDIR}/${P}/bin/import_synapse" "${WORKDIR}/${P}/bin/plugin_antispam_ocr"
 }
