@@ -1999,7 +1999,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="acct-user/mmrepo"
 DEPEND="
 	${RDEPEND}
 	>=dev-lang/go-1.16
