@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+# Copyright 2019 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+description="Matrix Whatsapp bridge"
+description_reload="Reload configuration and reopen log files."
+
+command_user=${SYNAPSE_USER:-synapse}
+conf=${SYNAPSE_CONFIG:-/etc/mautrix-whatsapp/config.yaml}
+command=/usr/bin/mautrix-whatsapp
+command_args="-c ${conf}"
+
+depend() {
+	use dns
+	need net
+	provide matrix-whatsapp
+}
+
+checkconfig() {
+	if [ ! -e $SYNAPSE_CONFIG ] ; then
+		eerror "You need a $SYNAPSE_CONFIG file to run synapse"
+		return 1
+	fi
+}

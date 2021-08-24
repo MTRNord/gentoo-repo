@@ -2003,7 +2003,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="acct-user/mmrepo"
+RDEPEND="
+	acct-user/mmrepo
+	virtual/imagemagick-tools
+"
 DEPEND="
 	${RDEPEND}
 	>=dev-lang/go-1.16
