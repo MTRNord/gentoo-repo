@@ -6,7 +6,7 @@ EGO_PN="github.com/tulir/mautrix-whatsapp"
 
 DESCRIPTION="A Matrix-WhatsApp puppeting bridge"
 HOMEPAGE="https://maunium.net/go/mautrix-whatsapp"
-SRC_URI="${EGO_SUM_SRC_URI}"
+SRC_URI=""
 
 inherit git-r3
 inherit go-module
