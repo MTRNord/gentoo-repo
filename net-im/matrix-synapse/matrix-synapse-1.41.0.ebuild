@@ -70,4 +70,3 @@ python_install_all() {
 	newinitd "${FILESDIR}"/synapse.initd synapse
 	newconfd "${FILESDIR}"/synapse.confd synapse
 }
-

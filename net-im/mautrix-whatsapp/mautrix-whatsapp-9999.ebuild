@@ -36,7 +36,6 @@ src_unpack() {
 }
 fi
 
-
 src_compile() {
 	go build
 }
