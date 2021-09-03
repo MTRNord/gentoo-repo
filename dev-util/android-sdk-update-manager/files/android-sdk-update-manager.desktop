@@ -1,5 +1,5 @@
 [Desktop Entry]
-ersion=1.0
+Version=1.0
 Name=Android SDK update-manager
 Type=Application
 Comment=Manage/update Android SDK (tools).
@@ -8,4 +8,4 @@ Exec=/opt/android-sdk-update-manager/tools/android
 Icon=/opt/android-sdk-update-manager/tools/apps/SdkController/res/drawable-xhdpi/ic_launcher.png
 Categories=Development;
 GenericName=Android SDK update-manager
-V
+

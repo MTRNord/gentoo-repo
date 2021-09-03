@@ -26,7 +26,7 @@ IUSE=""
 
 DEPEND="dev-lang/go
 dev-libs/olm"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND} acct-user/mautrix-whatsapp"
 BDEPEND=""
 
 if [[ ${PV} == 9999 ]]; then
