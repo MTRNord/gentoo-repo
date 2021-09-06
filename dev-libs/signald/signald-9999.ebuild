@@ -40,7 +40,17 @@ src_compile() {
 }
 
 src_install() {
-	dobin build/install/signald/bin/signald
+	#dobin build/install/signald/bin/signald
+	insinto /var/signald
+#	fperms 0776 build/install/signald/bin/signald
+	doins -r build/install/signald/bin/
+
+	dosym /var/signald/bin/signald /usr/bin/signald
+	fperms 0775 /var/signald/bin/signald
+#        fperms 0775 /usr/bin/signald
+
+	insinto /var/signald/
+	doins -r build/install/signald/lib/
 	keepdir /var/run/signald
 	fowners -R signald:signald /var/run/signald
 }
